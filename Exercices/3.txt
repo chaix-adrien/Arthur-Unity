@@ -1,0 +1,40 @@
+
+-Creer un script "Apprentissage"
+
+DANS CE SCRIPT:
+-Creer une methode "addition" qui retourne un int, et qui prends en argument 2 int. Cette methode retourne le resultat de l'addition des arguments.
+-Faire pareil avec une methode "multiplication", "soustraction", "division", qui retourne les bons calculs a chaques fois
+-Creer une methode "apprentissage"
+
+DANS LA METHODE "apprentissage":
+-creer une variable "compteur" qui contien le chiffre 0
+-Faire en sorte que le shema suivant se repete 10 fois:
+    ¤Afficher (Debug.Log) le contenu de compteur
+    ¤Afficher le resultat de compteur + compteur
+    ¤Afficher le resultat de compteur * compteur
+    ¤Afficher le resultat de compteur - compteur
+    ¤Afficher le resultat de compteur / compteur
+
+-Faire en sorte que la methode "apprentissage" soit appelé dans la methode Update
+-Faire en sorte que la methode "apprentissage" soit appelé seulement si la touche A est enfoncé
+
+Partie avancée:
+Faire en sorte que la touche qui declenche tout (A dans mon exemple), soit changeable dans l'editeur d'unity
+(indice: une variable qui contien des lettres est de type "string")
+
+
+
+AIDE:
+while (condition) {
+  a faire si condition est vrai
+}
+
+if (condition) {
+
+} else {
+
+}
+
+int nomMethode(int arg1, int arg2) {
+  return retour
+}
