@@ -14,14 +14,13 @@ DANS LA METHODE "apprentissage":
     ¤Afficher le resultat de compteur * compteur
     ¤Afficher le resultat de compteur - compteur
     ¤Afficher le resultat de compteur / compteur
+    ¤Incrementer compteur
 
--Faire en sorte que la methode "apprentissage" soit appelé dans la methode Update
--Faire en sorte que la methode "apprentissage" soit appelé seulement si la touche A est enfoncé
+-Faire en sorte que la methode "apprentissage" soit appelé dans la methode Start
 
 Partie avancée:
-Faire en sorte que la touche qui declenche tout (A dans mon exemple), soit changeable dans l'editeur d'unity
-(indice: une variable qui contien des lettres est de type "string")
-
+Faire en sorte que le shema ne se repette pas 10 fois, mais un nombre de fois choisi dans l'editeur unity
+(indice: public int compteur)
 
 
 AIDE:

@@ -13,6 +13,7 @@ public class Deplacement : MonoBehaviour
 
   void Start()
   {
+
     rb = GetComponent<Rigidbody>();
   }
 
