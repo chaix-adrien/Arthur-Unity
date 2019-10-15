@@ -37,7 +37,6 @@ public class Deplacement : MonoBehaviour
     }
     if (Input.GetKey("s"))
     {
-      Debug.Log("le code passe bien ici");
       rb.velocity = rb.velocity + new Vector3(0, 0, -1) * vitesse * Time.deltaTime;
     }
   }
