@@ -7,13 +7,12 @@ public class Deplacement : MonoBehaviour
   // Start is called before the first frame update
 
   private Rigidbody rb;
-
+  public Transform camera;
   public int vitesse;
   public int vie;
 
   void Start()
   {
-
     rb = GetComponent<Rigidbody>();
   }
 
@@ -23,22 +22,22 @@ public class Deplacement : MonoBehaviour
     {
       rb.velocity = rb.velocity + new Vector3(0, 1, 0) * vitesse;
     }
-    if (Input.GetKey("q"))
-    {
-      rb.velocity = rb.velocity + new Vector3(-1, 0, 0) * vitesse * Time.deltaTime;
+    if (Input.GetKey("z")) {
+      //La direction de la vitesse  = la direction de la caméra (en avant)
+      rb.velocity = rb.velocity + camera.forward  * vitesse * Time.deltaTime;
     }
-    if (Input.GetKey("d"))
-    {
-      rb.velocity = rb.velocity + new Vector3(1, 0, 0) * vitesse * Time.deltaTime;
+    if (Input.GetKey("s")) {
+      //La direction de la vitesse  = l'inverse de la direction de la caméra (en arriere)
+      rb.velocity = rb.velocity +  -camera.forward * vitesse * Time.deltaTime;
     }
-    if (Input.GetKey("z"))
-    {
-      rb.velocity = rb.velocity + new Vector3(0, 0, 1) * vitesse * Time.deltaTime;
+    if (Input.GetKey("d")) {
+      //La direction de la vitesse = la droite de la caméra (a droite)
+      rb.velocity = rb.velocity + camera.right * vitesse * Time.deltaTime;
     }
-    if (Input.GetKey("s"))
-    {
-      rb.velocity = rb.velocity + new Vector3(0, 0, -1) * vitesse * Time.deltaTime;
-    }
+    if (Input.GetKey("q")) {
+      //La direction de la vitesse = l'inverse de la droite de la caméra (a gauche)
+      rb.velocity = rb.velocity +  -camera.right * vitesse * Time.deltaTime;
+    }    
   }
 
 
